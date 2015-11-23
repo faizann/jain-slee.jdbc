@@ -28,3 +28,4 @@ Thumbs.db
 resources/jdbc/docs/sources-mobicents/src/
 ${env.JBOSS_HOME}
 ${release.dir}
+*.iml

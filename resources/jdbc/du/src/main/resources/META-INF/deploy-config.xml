@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy-config>
-	<ra-entity
-		resource-adaptor-id="ResourceAdaptorID[name=JdbcResourceAdaptor,vendor=org.mobicents,version=1.0]"
-		entity-name="JDBCRA">
-		<properties/>
-		<ra-link name="JDBCRA" />
-	</ra-entity>
+    <ra-entity
+            resource-adaptor-id="ResourceAdaptorID[name=JdbcResourceAdaptor,vendor=org.mobicents,version=1.0]"
+            entity-name="JDBCRA">
+        <properties/>
+        <ra-link name="JDBCRA" />
+    </ra-entity>
+    <ra-entity
+            resource-adaptor-id="ResourceAdaptorID[name=JdbcResourceAdaptor,vendor=org.mobicents,version=1.0]"
+            entity-name="JDBCMDRA">
+        <properties>
+            <property name="DATASOURCE_JNDI_NAME" type="java.lang.String" value="java:MariaDS"/>
+            <property name="EXECUTOR_SERVICE_THREADS" type="java.lang.Integer" value="4"/>
+            <property name="RA_SBB_INTERFACE_CONNECTION_GETTERS_ON" type="java.lang.Boolean" value="true"/>
+        </properties>
+        <ra-link name="JDBCMDRA" />
+    </ra-entity>
 </deploy-config>
